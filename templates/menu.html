@@ -1,0 +1,7 @@
+			<div class="menu">
+				<ul class="nav nav-pills">
+					{% for menuG in menu %}
+					<li><a href="{{ menuG.url }}" class="btn">{{ menuG.pagetitle }}</a></li>
+					{% endfor %}
+				</ul>
+			</div>

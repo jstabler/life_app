@@ -1,0 +1,129 @@
+@font-face {
+	font-family: 'life_symbols';
+	src:url('/static/life_symbols40604/fonts/life_symbols.eot');
+	src:url('/static/life_symbols40604/fonts/life_symbols.eot?#iefix') format('embedded-opentype'),
+		url('/static/life_symbols40604/fonts/life_symbols.svg#life_symbols') format('svg'),
+		url('/static/life_symbols40604/fonts/life_symbols.woff') format('woff'),
+		url('/static/life_symbols40604/fonts/life_symbols.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+	font-family: 'life_symbols';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*=""]:before {
+*/
+.movie:before, .beer:before, .place:before, .ran:before, .hiked:before, .camera:before, .movie-2:before, .tv:before, .music:before, .gamepad:before, .cog:before, .bug:before, .globe:before, .binocular:before, .bookmark:before, .pencil:before, .gift:before, .lamp:before, .settings:before, .medicine:before, .cone:before, .key:before, .timer:before, .food:before, .cup:before, .drink:before, .truck:before, .car:before {
+	font-family: 'life_symbols';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	position: absolute;
+	font-size: 2.5em;
+	margin:1px 0 0 0;
+	text-shadow: 0px 2px 3px #666;
+	padding: 5px 10px;
+	border-radius: 10px; border: 1px dashed #999;
+	-moz-box-shadow:inset 0 0 5px rgba(0, 0, 0, .2);
+   -webkit-box-shadow:inset 0 0 5px rgba(0, 0, 0, .2);
+   box-shadow: inset 0 0 5px rgba(0, 0, 0, .2);
+}
+div.more:before {border: 1px solid #86C543;}
+.movie-2:before {
+	content: "\e000";
+}
+.beer:before {
+	content: "\e001";
+}
+.place:before {
+	content: "\e002";
+}
+.ran:before {
+	content: "\e003";
+}
+.hiked:before {
+	content: "\e004";
+}
+.camera:before {
+	content: "\e020";
+}
+.movie:before {
+	content: "\e026";
+}
+.tv:before {
+	content: "\e027";
+}
+.music:before {
+	content: "\e02f";
+}
+.gamepad:before {
+	content: "\e035";
+}
+.cog:before {
+	content: "\e036";
+}
+.bug:before {
+	content: "\e039";
+}
+.globe:before {
+	content: "\e03c";
+}
+.binocular:before {
+	content: "\e046";
+}
+.bookmark:before {
+	content: "\e04e";
+}
+.pencil:before {
+	content: "\e055";
+}
+.gift:before {
+	content: "\e060";
+}
+.lamp:before {
+	content: "\e061";
+}
+.settings:before {
+	content: "\e062";
+}
+.medicine:before {
+	content: "\e064";
+}
+.cone:before {
+	content: "\e065";
+}
+.key:before {
+	content: "\e068";
+}
+.timer:before {
+	content: "\e06b";
+}
+.food:before {
+	content: "\e005";
+}
+.cup:before {
+	content: "\e06e";
+}
+.drink:before {
+	content: "\e06f";
+}
+.truck:before {
+	content: "\e006";
+}
+.car:before {
+	content: "\e007";
+}

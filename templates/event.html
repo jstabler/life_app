@@ -1,0 +1,16 @@
+{% extends 'event_base.html' %}
+
+				{% block content %}
+
+				{% for title in title %}
+					<div class="event {{ title.category }} {% cycle 'odd' 'even' %}">
+						<ul><strong>{{ title.title }}</strong> at {{ title.timestamp|time }} on {{ title.timestamp|date}}
+							<li>{{ title.category|title }} {% if title.counter %} {{ title.counter}} {{ title.counterUnit }}{% else %}{% endif%} {% if title.length %} for {{ title.length|time:"H:i" }} hrs{% else %}{% endif%}</li>
+							<span class="listHide">
+							{% if title.description %}<li>{{ title.description|truncatewords:10 }}</li>{% else %}{% endif%}
+							{% if title.image %}<li><img src="/media/{{ title.image }}"></li>{% else %}{% endif%}
+							{% if title.url %}<li>{{ title.url}}</li>{% else %}{% endif%}
+							</span>
+					</div>
+				{% endfor %}
+				{% endblock %}

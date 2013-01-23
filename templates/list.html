@@ -1,0 +1,45 @@
+{% extends "index.html" %}
+
+{% block content %}
+	<div class="content span9">
+	{% for post in post_list %}
+		<div class="post">
+			<a href="{% url blog.views.post post.pk %}"><h2 class="postTitle">{{ post.title }}</h2></a>
+			<h5 class="postInfo">Posted on {{ post.timestamp }} by {{ post.author }}</h5>
+			<hr />
+			<div class="postContent">{{ post.bodytext|truncatewords:80 }}</div>
+			<a href="{% url blog.views.post post.pk %}">Read Article &rarr;</a>
+		</div>
+	{% endfor %}
+	</div>
+{% endblock %}
+
+{% block sidebar %}
+    <div class="sidebar span2">
+        <h4>Archive</h4>
+        {% for month in months %}
+	    {% ifchanged month.0 %} {{ month.0 }} <br /> {% endifchanged %}
+	    <a href="{% url blog.views.month month.0 month.1 %}">{{ month.2 }}</a> <br />
+		{% endfor %}
+	</div>
+{% endblock %}
+
+{% block paginator %}
+	{% if posts.object_list and posts.paginator.num_pages > 1 %}
+		<div class="span12">
+	        <span class="step-links">
+	            {% if posts.has_previous %}
+	                <a href= "?page={{ posts.previous_page_number }}">newer entries &lt; </a>
+	            {% endif %}
+
+	            <span class="current">
+	                &nbsp;Page {{ posts.number }} of {{ posts.paginator.num_pages }}
+	            </span>
+
+	            {% if posts.has_next %}
+	                <a href="?page={{ posts.next_page_number }}"> &gt; older entries</a>
+	            {% endif %}
+	        </span>
+	    </div>
+	{% endif %}
+{% endblock %}
